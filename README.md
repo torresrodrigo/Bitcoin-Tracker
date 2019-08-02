@@ -1,11 +1,4 @@
 # BitcoinTicker
-Learn to make iOS Apps with [The App Brewery](https://www.appbrewery.co) 📱 | Project Stub | (Swift 4.0/Xcode 9) - Bitcoin Ticker App
+Esta aplicacion fue desarollada a partir del curso de Udemy de "iOS 11 & Swift 4 - The Complete iOS App Development Bootcamp" dictado por la instructora Angela Yu
 
-Beginner: Download the starter project files as .zip and extract the files to your desktop.
-
-Pro: Git clone to your Xcode projects folder.
-
-## Finished App
-![Finished App](http://i.giphy.com/l0HlQGzz2MQCKIBI4.gif)
-
-Copyright © The App Brewery
+En esta aplicacion se utliza API Restful para obtener los datos del precio actual de Bitcoin dependiendo de la moneda elegida. Una vez elegida la moneda se muestra en la aplicacion su valor en la moneda elegida. 
