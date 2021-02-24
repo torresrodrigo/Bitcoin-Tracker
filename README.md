@@ -5,4 +5,4 @@ En esta aplicacion se utliza API Restful para obtener los datos del precio actua
 
 Todo el codigo se aloja en BitcoinTicker/ViewController.Swift
 
-AAAASDADADAS
+TTTTTTTTTTTTTTTTTTTTTT
