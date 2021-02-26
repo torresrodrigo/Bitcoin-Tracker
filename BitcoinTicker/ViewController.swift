@@ -16,6 +16,7 @@ class ViewController: UIViewController, UIPickerViewDataSource , UIPickerViewDel
     let currencyArray = ["AUD","ARS", "BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB","SEK","SGD","USD","ZAR"]
     var finalURL = ""
     var keyAPI = "Zjc2OGI0YzI4NGY0NDYxY2JmNTc3ZDViMmVjNDk3NTY"
+    //PODRIAS ENCRIPTAR LA KEY PARA MAS SEGURIDAD 
 
     //Pre-setup IBOutlets
     @IBOutlet weak var bitcoinPriceLabel: UILabel!
