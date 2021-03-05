@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  BitcoinTicker
-//
-//  Created by Angela Yu on 23/01/2016.
-//  Copyright © 2016 London App Brewery. All rights reserved.
-//
-
 import UIKit
 import Alamofire
 import SwiftyJSON
@@ -27,12 +19,9 @@ class ViewController: UIViewController, UIPickerViewDataSource , UIPickerViewDel
         super.viewDidLoad()
         currencyPicker.delegate = self
         currencyPicker.dataSource = self
-        
-       
     }
 
     
-    //TODO: Place your 3 UIPickerView delegate methods here
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -51,53 +40,30 @@ class ViewController: UIViewController, UIPickerViewDataSource , UIPickerViewDel
     }
     
     
-    
-
-    
-    
-    
-//    
-//    //MARK: - Networking
-//    /***************************************************************/
-    
     func getBitcoinData(url: String) {
         
         Alamofire.request(url, method: .get ).responseJSON {
-                response in
-                if response.result.isSuccess {
+            response in
+            if response.result.isSuccess {
 
-                    print("Sucess! Got the bitcoin data")
-                    let bitcoinJSON : JSON = JSON(response.result.value!)
+                print("Sucess! Got the bitcoin data")
+                let bitcoinJSON : JSON = JSON(response.result.value!)
 
-                    self.updateBitcoinData(json: bitcoinJSON)
+                self.updateBitcoinData(json: bitcoinJSON)
 
-                } else {
-                    print("Error: \(String(describing: response.result.error))")
-                    self.bitcoinPriceLabel.text = "Connection Issues"
-                }
+            } else {
+                print("Error: \(String(describing: response.result.error))")
+                self.bitcoinPriceLabel.text = "Connection Issues"
             }
-
+        }
     }
-//
-//    
-//    
-//    
-//    
-//    //MARK: - JSON Parsing
-//    /***************************************************************/
-//    
+
     func updateBitcoinData(json : JSON) {
         
         if let bitcoinResult = json["ask"].double {
             bitcoinPriceLabel.text = String(bitcoinResult)
         }
-        
-
     }
-    
- 
-
-
 
 }
 
